@@ -4,12 +4,12 @@ import streamlit as st
 import os
 import json
 from datetime import datetime
-from dotenv import load_dotenv
+
 from openai import OpenAI
 from prompt_template import system_prompt, build_user_prompt # 모듈 import
 
 # 1. 환경 변수 및 클라이언트 초기화
-load_dotenv()
+
 api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=api_key)
 
